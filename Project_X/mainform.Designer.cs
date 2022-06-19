@@ -38,10 +38,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lib_page = new System.Windows.Forms.TabPage();
+            this.gb1 = new System.Windows.Forms.GroupBox();
+            this.acept_btn = new System.Windows.Forms.Button();
+            this.lb2 = new System.Windows.Forms.Label();
+            this.film_location = new System.Windows.Forms.TextBox();
+            this.open_film_data_location = new System.Windows.Forms.Button();
+            this.images = new System.Windows.Forms.ImageList(this.components);
+            this.ok_film_title = new System.Windows.Forms.Button();
+            this.lb1 = new System.Windows.Forms.Label();
+            this.n_film_title = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.clear_btn = new System.Windows.Forms.Button();
             this.load_list = new System.Windows.Forms.Button();
-            this.images = new System.Windows.Forms.ImageList(this.components);
             this.save_list = new System.Windows.Forms.Button();
             this.film_caption = new System.Windows.Forms.Label();
             this.film_poster = new System.Windows.Forms.PictureBox();
@@ -65,18 +74,10 @@
             this.ip3 = new System.Windows.Forms.NumericUpDown();
             this.ip2 = new System.Windows.Forms.NumericUpDown();
             this.ip1 = new System.Windows.Forms.NumericUpDown();
-            this.clear_btn = new System.Windows.Forms.Button();
-            this.gb1 = new System.Windows.Forms.GroupBox();
-            this.n_film_title = new System.Windows.Forms.TextBox();
-            this.lb1 = new System.Windows.Forms.Label();
-            this.ok_film_title = new System.Windows.Forms.Button();
-            this.film_location = new System.Windows.Forms.TextBox();
-            this.lb2 = new System.Windows.Forms.Label();
-            this.acept_btn = new System.Windows.Forms.Button();
-            this.open_film_data_location = new System.Windows.Forms.Button();
             this.mainform_table.SuspendLayout();
             this.mc_page.SuspendLayout();
             this.lib_page.SuspendLayout();
+            this.gb1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.film_poster)).BeginInit();
             this.menu_poster.SuspendLayout();
@@ -86,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ip3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip1)).BeginInit();
-            this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainform_table
@@ -116,7 +116,7 @@
             this.mc_page.Location = new System.Drawing.Point(4, 23);
             this.mc_page.Name = "mc_page";
             this.mc_page.Padding = new System.Windows.Forms.Padding(3);
-            this.mc_page.Size = new System.Drawing.Size(428, 481);
+            this.mc_page.Size = new System.Drawing.Size(428, 246);
             this.mc_page.TabIndex = 0;
             this.mc_page.Text = "Медиацентр";
             this.mc_page.UseVisualStyleBackColor = true;
@@ -205,6 +205,116 @@
             this.lib_page.Text = "Библиотека";
             this.lib_page.UseVisualStyleBackColor = true;
             // 
+            // gb1
+            // 
+            this.gb1.Controls.Add(this.acept_btn);
+            this.gb1.Controls.Add(this.lb2);
+            this.gb1.Controls.Add(this.film_location);
+            this.gb1.Controls.Add(this.open_film_data_location);
+            this.gb1.Controls.Add(this.ok_film_title);
+            this.gb1.Controls.Add(this.lb1);
+            this.gb1.Controls.Add(this.n_film_title);
+            this.gb1.Location = new System.Drawing.Point(194, 206);
+            this.gb1.Name = "gb1";
+            this.gb1.Size = new System.Drawing.Size(226, 135);
+            this.gb1.TabIndex = 6;
+            this.gb1.TabStop = false;
+            this.gb1.Text = "Детали о фильме";
+            this.gb1.Visible = false;
+            // 
+            // acept_btn
+            // 
+            this.acept_btn.BackColor = System.Drawing.Color.Gainsboro;
+            this.acept_btn.FlatAppearance.BorderSize = 0;
+            this.acept_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.acept_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.acept_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acept_btn.Location = new System.Drawing.Point(9, 102);
+            this.acept_btn.Name = "acept_btn";
+            this.acept_btn.Size = new System.Drawing.Size(75, 23);
+            this.acept_btn.TabIndex = 5;
+            this.acept_btn.Text = "Accept";
+            this.acept_btn.UseVisualStyleBackColor = false;
+            this.acept_btn.Click += new System.EventHandler(this.acept_btn_Click);
+            // 
+            // lb2
+            // 
+            this.lb2.AutoSize = true;
+            this.lb2.Location = new System.Drawing.Point(6, 58);
+            this.lb2.Name = "lb2";
+            this.lb2.Size = new System.Drawing.Size(89, 14);
+            this.lb2.TabIndex = 4;
+            this.lb2.Text = "Film data location";
+            // 
+            // film_location
+            // 
+            this.film_location.Location = new System.Drawing.Point(9, 75);
+            this.film_location.Name = "film_location";
+            this.film_location.Size = new System.Drawing.Size(166, 21);
+            this.film_location.TabIndex = 3;
+            // 
+            // open_film_data_location
+            // 
+            this.open_film_data_location.BackColor = System.Drawing.Color.Transparent;
+            this.open_film_data_location.FlatAppearance.BorderSize = 0;
+            this.open_film_data_location.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.open_film_data_location.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.open_film_data_location.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_film_data_location.ImageIndex = 8;
+            this.open_film_data_location.ImageList = this.images;
+            this.open_film_data_location.Location = new System.Drawing.Point(181, 74);
+            this.open_film_data_location.Name = "open_film_data_location";
+            this.open_film_data_location.Size = new System.Drawing.Size(23, 23);
+            this.open_film_data_location.TabIndex = 2;
+            this.open_film_data_location.UseVisualStyleBackColor = false;
+            this.open_film_data_location.Click += new System.EventHandler(this.open_film_data_location_Click);
+            // 
+            // images
+            // 
+            this.images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("images.ImageStream")));
+            this.images.TransparentColor = System.Drawing.Color.Transparent;
+            this.images.Images.SetKeyName(0, "globe.ico");
+            this.images.Images.SetKeyName(1, "two displays.png");
+            this.images.Images.SetKeyName(2, "two pictures.png");
+            this.images.Images.SetKeyName(3, "save.png");
+            this.images.Images.SetKeyName(4, "open.png");
+            this.images.Images.SetKeyName(5, "import.png");
+            this.images.Images.SetKeyName(6, "delete.ico");
+            this.images.Images.SetKeyName(7, "update.ico");
+            this.images.Images.SetKeyName(8, "find.ico");
+            // 
+            // ok_film_title
+            // 
+            this.ok_film_title.BackColor = System.Drawing.Color.Transparent;
+            this.ok_film_title.FlatAppearance.BorderSize = 0;
+            this.ok_film_title.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.ok_film_title.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ok_film_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ok_film_title.ImageIndex = 7;
+            this.ok_film_title.ImageList = this.images;
+            this.ok_film_title.Location = new System.Drawing.Point(181, 33);
+            this.ok_film_title.Name = "ok_film_title";
+            this.ok_film_title.Size = new System.Drawing.Size(23, 23);
+            this.ok_film_title.TabIndex = 2;
+            this.ok_film_title.UseVisualStyleBackColor = false;
+            this.ok_film_title.Click += new System.EventHandler(this.ok_film_title_Click);
+            // 
+            // lb1
+            // 
+            this.lb1.AutoSize = true;
+            this.lb1.Location = new System.Drawing.Point(6, 17);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(87, 14);
+            this.lb1.TabIndex = 1;
+            this.lb1.Text = "New film caption";
+            // 
+            // n_film_title
+            // 
+            this.n_film_title.Location = new System.Drawing.Point(9, 34);
+            this.n_film_title.Name = "n_film_title";
+            this.n_film_title.Size = new System.Drawing.Size(166, 21);
+            this.n_film_title.TabIndex = 0;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -220,6 +330,24 @@
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(13, 17);
             this.status.Text = "0";
+            // 
+            // clear_btn
+            // 
+            this.clear_btn.BackColor = System.Drawing.Color.Transparent;
+            this.clear_btn.FlatAppearance.BorderSize = 0;
+            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.ImageIndex = 6;
+            this.clear_btn.ImageList = this.images;
+            this.clear_btn.Location = new System.Drawing.Point(397, 6);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(23, 23);
+            this.clear_btn.TabIndex = 4;
+            this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
+            this.clear_btn.MouseLeave += new System.EventHandler(this.Element_MouseLeave);
+            this.clear_btn.MouseHover += new System.EventHandler(this.clear_btn_MouseHover);
             // 
             // load_list
             // 
@@ -238,20 +366,6 @@
             this.load_list.Click += new System.EventHandler(this.load_list_Click);
             this.load_list.MouseLeave += new System.EventHandler(this.Element_MouseLeave);
             this.load_list.MouseHover += new System.EventHandler(this.load_list_MouseHover);
-            // 
-            // images
-            // 
-            this.images.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("images.ImageStream")));
-            this.images.TransparentColor = System.Drawing.Color.Transparent;
-            this.images.Images.SetKeyName(0, "globe.ico");
-            this.images.Images.SetKeyName(1, "two displays.png");
-            this.images.Images.SetKeyName(2, "two pictures.png");
-            this.images.Images.SetKeyName(3, "save.png");
-            this.images.Images.SetKeyName(4, "open.png");
-            this.images.Images.SetKeyName(5, "import.png");
-            this.images.Images.SetKeyName(6, "delete.ico");
-            this.images.Images.SetKeyName(7, "update.ico");
-            this.images.Images.SetKeyName(8, "find.ico");
             // 
             // save_list
             // 
@@ -564,119 +678,6 @@
             0});
             this.ip1.ValueChanged += new System.EventHandler(this.Selected_ip_address);
             // 
-            // clear_btn
-            // 
-            this.clear_btn.BackColor = System.Drawing.Color.Transparent;
-            this.clear_btn.FlatAppearance.BorderSize = 0;
-            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.ImageIndex = 6;
-            this.clear_btn.ImageList = this.images;
-            this.clear_btn.Location = new System.Drawing.Point(397, 6);
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(23, 23);
-            this.clear_btn.TabIndex = 4;
-            this.clear_btn.UseVisualStyleBackColor = false;
-            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
-            this.clear_btn.MouseLeave += new System.EventHandler(this.Element_MouseLeave);
-            this.clear_btn.MouseHover += new System.EventHandler(this.clear_btn_MouseHover);
-            // 
-            // gb1
-            // 
-            this.gb1.Controls.Add(this.acept_btn);
-            this.gb1.Controls.Add(this.lb2);
-            this.gb1.Controls.Add(this.film_location);
-            this.gb1.Controls.Add(this.open_film_data_location);
-            this.gb1.Controls.Add(this.ok_film_title);
-            this.gb1.Controls.Add(this.lb1);
-            this.gb1.Controls.Add(this.n_film_title);
-            this.gb1.Location = new System.Drawing.Point(194, 206);
-            this.gb1.Name = "gb1";
-            this.gb1.Size = new System.Drawing.Size(226, 135);
-            this.gb1.TabIndex = 6;
-            this.gb1.TabStop = false;
-            this.gb1.Text = "Детали о фильме";
-            // 
-            // n_film_title
-            // 
-            this.n_film_title.Location = new System.Drawing.Point(9, 34);
-            this.n_film_title.Name = "n_film_title";
-            this.n_film_title.Size = new System.Drawing.Size(166, 21);
-            this.n_film_title.TabIndex = 0;
-            // 
-            // lb1
-            // 
-            this.lb1.AutoSize = true;
-            this.lb1.Location = new System.Drawing.Point(6, 17);
-            this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(87, 14);
-            this.lb1.TabIndex = 1;
-            this.lb1.Text = "New film caption";
-            // 
-            // ok_film_title
-            // 
-            this.ok_film_title.BackColor = System.Drawing.Color.Transparent;
-            this.ok_film_title.FlatAppearance.BorderSize = 0;
-            this.ok_film_title.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.ok_film_title.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.ok_film_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ok_film_title.ImageIndex = 7;
-            this.ok_film_title.ImageList = this.images;
-            this.ok_film_title.Location = new System.Drawing.Point(181, 33);
-            this.ok_film_title.Name = "ok_film_title";
-            this.ok_film_title.Size = new System.Drawing.Size(23, 23);
-            this.ok_film_title.TabIndex = 2;
-            this.ok_film_title.UseVisualStyleBackColor = false;
-            this.ok_film_title.Click += new System.EventHandler(this.ok_film_title_Click);
-            // 
-            // film_location
-            // 
-            this.film_location.Location = new System.Drawing.Point(9, 75);
-            this.film_location.Name = "film_location";
-            this.film_location.Size = new System.Drawing.Size(166, 21);
-            this.film_location.TabIndex = 3;
-            // 
-            // lb2
-            // 
-            this.lb2.AutoSize = true;
-            this.lb2.Location = new System.Drawing.Point(6, 58);
-            this.lb2.Name = "lb2";
-            this.lb2.Size = new System.Drawing.Size(89, 14);
-            this.lb2.TabIndex = 4;
-            this.lb2.Text = "Film data location";
-            // 
-            // acept_btn
-            // 
-            this.acept_btn.BackColor = System.Drawing.Color.Gainsboro;
-            this.acept_btn.FlatAppearance.BorderSize = 0;
-            this.acept_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.acept_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.acept_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.acept_btn.Location = new System.Drawing.Point(9, 102);
-            this.acept_btn.Name = "acept_btn";
-            this.acept_btn.Size = new System.Drawing.Size(75, 23);
-            this.acept_btn.TabIndex = 5;
-            this.acept_btn.Text = "Accept";
-            this.acept_btn.UseVisualStyleBackColor = false;
-            this.acept_btn.Click += new System.EventHandler(this.acept_btn_Click);
-            // 
-            // open_film_data_location
-            // 
-            this.open_film_data_location.BackColor = System.Drawing.Color.Transparent;
-            this.open_film_data_location.FlatAppearance.BorderSize = 0;
-            this.open_film_data_location.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.open_film_data_location.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.open_film_data_location.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open_film_data_location.ImageIndex = 8;
-            this.open_film_data_location.ImageList = this.images;
-            this.open_film_data_location.Location = new System.Drawing.Point(181, 74);
-            this.open_film_data_location.Name = "open_film_data_location";
-            this.open_film_data_location.Size = new System.Drawing.Size(23, 23);
-            this.open_film_data_location.TabIndex = 2;
-            this.open_film_data_location.UseVisualStyleBackColor = false;
-            this.open_film_data_location.Click += new System.EventHandler(this.open_film_data_location_Click);
-            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -696,6 +697,8 @@
             this.mc_page.ResumeLayout(false);
             this.lib_page.ResumeLayout(false);
             this.lib_page.PerformLayout();
+            this.gb1.ResumeLayout(false);
+            this.gb1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.film_poster)).EndInit();
@@ -707,8 +710,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ip3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ip1)).EndInit();
-            this.gb1.ResumeLayout(false);
-            this.gb1.PerformLayout();
             this.ResumeLayout(false);
 
         }
