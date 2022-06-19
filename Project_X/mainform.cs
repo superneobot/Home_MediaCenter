@@ -222,7 +222,7 @@ namespace Project_X
 
         private void film_list_DoubleClick(object sender, EventArgs e)
         {
-            if(film_list.SelectedIndex >= 0)
+            if (film_list.SelectedIndex >= 0)
             {
                 gb1.Visible = true;
             }
